@@ -1,0 +1,12 @@
+﻿@model OnlineVotingSystem.Models.User
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    <br />
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    <br />
+    <input type="submit" value="Register" />
+}

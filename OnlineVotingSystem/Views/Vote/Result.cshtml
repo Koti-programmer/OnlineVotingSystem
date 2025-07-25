@@ -1,0 +1,33 @@
+﻿@model List<OnlineVotingSystem.Models.VoteResultViewModel>
+
+@{
+    ViewBag.Title = "Voting Results";
+}
+
+<h2>Voting Results</h2>
+
+<!-- Display TempData message if available -->
+@if (TempData["Message"] != null)
+{
+    <p style="color: green; font-weight: bold;">@TempData["Message"]</p>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Candidate Name</th>
+            <th>Party</th>
+            <th>Total Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model)
+        {
+            <tr>
+                <td>@result.CandidateName</td>
+                <td>@result.Party</td>
+                <td>@result.VoteCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
