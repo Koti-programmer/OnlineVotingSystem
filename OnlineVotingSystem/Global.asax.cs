@@ -27,6 +27,8 @@ namespace OnlineVotingSystem
                     context.Candidates.Add(new Models.Candidate { Name = "Alice", Party = "Party A" });
                     context.Candidates.Add(new Models.Candidate { Name = "Bob", Party = "Party B" });
                     context.Candidates.Add(new Models.Candidate { Name = "Charlie", Party = "Party C" });
+
+                    context.Candidates.Add(new Models.Candidate { Name = "JK", Party = "Party D" });
                     context.SaveChanges();
                 }
             }
