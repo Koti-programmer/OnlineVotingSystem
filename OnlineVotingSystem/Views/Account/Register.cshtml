@@ -1,12 +1,28 @@
 ﻿@model OnlineVotingSystem.Models.User
-<h2>Register</h2>
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(m => m.Username)
-    @Html.TextBoxFor(m => m.Username)
-    <br />
-    @Html.LabelFor(m => m.Password)
-    @Html.PasswordFor(m => m.Password)
-    <br />
-    <input type="submit" value="Register" />
+
+@{
+    ViewBag.Title = "Register";
 }
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow p-4" style="min-width: 350px; max-width: 400px; width: 100%;">
+        <h2 class="text-center mb-4">Register</h2> <!-- Centered heading -->
+
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            <div class="form-group mb-3">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Enter username" })
+            </div>
+
+            <div class="form-group mb-4">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password" })
+            </div>
+
+            <div>
+                <input type="submit" value="Register" class="btn btn-primary" /> <!-- Left-aligned -->
+            </div>
+        }
+    </div>
+</div>

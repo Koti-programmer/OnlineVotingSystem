@@ -1,19 +1,36 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+<main aria-labelledby="title" class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow p-4 text-center" style="max-width: 600px; width: 100%;">
+        <h2 id="title" class="mb-4">Contact</h2>
 
-    <address>
-        Hyderabad<br />
-        Sr Nagar, TG-500038<br />
-        <abbr title="Phone">Ph:</abbr>
-        998-551-6142
-    </address>
+        <p class="mb-4">
+            We'd love to hear from you! Whether you're a voter, candidate, or admin, feel free to reach out for support or collaboration.
+        </p>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:koti40565@gmail.com">Support@example.com</a><br />
-        
-    </address>
+        <h4 class="mb-3">Contact Information</h4>
+        <p><i class="fas fa-phone-alt me-2"></i>+91 998-551-6142</p>
+        <p><i class="fas fa-envelope me-2"></i><a href="mailto:koti40565@gmail.com">koti40565@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Sr Nagar, Hyderabad, India - 500038</p>
+
+        <h5 class="mt-4">Connect With Me</h5>
+        <div class="d-flex justify-content-center gap-4 mt-2 fs-4">
+            <a href="https://www.linkedin.com/in/koteswaraiah-jangam/" class="text-primary" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Koti-programmer" class="text-dark" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:koti40565@gmail.com" class="text-danger" target="_blank" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://x.com/StylishKoti1" class="text-info" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/koteswaraiahjangam" class="text-primary" target="_blank" aria-label="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+        </div>
+    </div>
 </main>
